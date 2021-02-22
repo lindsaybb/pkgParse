@@ -18,7 +18,7 @@ pkgParse is a generic Golang utility program for summarizing the imports and fun
 
 # Example Output
 ```sh
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/client.go    Packagename: goftp      Length: 442
+Filename: /home/user/go/src/github.com/secsy/goftp/client.go    Packagename: goftp      Length: 442
 Imports: ["crypto/tls" "errors" "fmt" "io" "net" "sync" "time"]
 Functions:
         func (e ftpError) Error() string {
@@ -36,7 +36,7 @@ Functions:
         func (c *Client) OpenRawConn() (RawConn, error) {
         func (c *Client) openConn(idx int, host string) (pconn *persistentConn, err error) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/client_test.go       Packagename: goftp      Length: 150
+Filename: /home/user/go/src/github.com/secsy/goftp/client_test.go       Packagename: goftp      Length: 150
 Imports: ["bytes" "crypto/tls" "sync" "testing" "time"]
 Functions:
         func TestTimeoutConnect(t *testing.T) {
@@ -44,14 +44,14 @@ Functions:
         func TestImplicitTLS(t *testing.T) {
         func TestPooling(t *testing.T) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/examples_test.go     Packagename: goftp_test Length: 97
+Filename: /home/user/go/src/github.com/secsy/goftp/examples_test.go     Packagename: goftp_test Length: 97
 Imports: ["bytes" "fmt" "io/ioutil" "os" "time"  "github.com/secsy/goftp"]
 Functions:
         func Example() {
         func Example_config() {
         func ExampleClient_OpenRawConn() {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/file_system.go       Packagename: goftp      Length: 496
+Filename: /home/user/go/src/github.com/secsy/goftp/file_system.go       Packagename: goftp      Length: 496
 Imports: ["bufio" "fmt" "os" "path/filepath" "regexp" "strconv" "strings" "time"]
 Functions:
         func (c *Client) Delete(path string) error {
@@ -74,7 +74,7 @@ Functions:
         func parseLIST(entry string, loc *time.Location, skipSelfParent bool) (os.FileInfo, error) {
         func parseMLST(entry string, skipSelfParent bool) (os.FileInfo, error) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/file_system_test.go  Packagename: goftp      Length: 482
+Filename: /home/user/go/src/github.com/secsy/goftp/file_system_test.go  Packagename: goftp      Length: 482
 Imports: ["bytes" "fmt" "io/ioutil" "os" "path" "reflect" "sort" "testing" "time"]
 Functions:
         func TestDelete(t *testing.T) {
@@ -89,27 +89,27 @@ Functions:
         func TestStatNoMLST(t *testing.T) {
         func TestGetwd(t *testing.T) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/goftp.go     Packagename: goftp      Length: 89
+Filename: /home/user/go/src/github.com/secsy/goftp/goftp.go     Packagename: goftp      Length: 89
 Imports: ["errors" "fmt" "net" "regexp"]
 Functions:
         func Dial(hosts ...string) (*Client, error) {
         func DialConfig(config Config, hosts ...string) (*Client, error) {
         func lookupHosts(hosts []string, ipv6Lookup bool) ([]string, error) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/main_test.go Packagename: goftp      Length: 148
+Filename: /home/user/go/src/github.com/secsy/goftp/main_test.go Packagename: goftp      Length: 148
 Imports: ["errors" "fmt" "log" "net" "os" "os/exec" "path" "testing" "time"]
 Functions:
         func TestMain(m *testing.M) {
         func startPureFTPD(addrs []string, binary string) (func(), error) {
         func startProFTPD() (func(), error) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/parallel_walk_test.go        Packagename: goftp_test Length: 84
+Filename: /home/user/go/src/github.com/secsy/goftp/parallel_walk_test.go        Packagename: goftp_test Length: 84
 Imports: ["fmt" "os" "path" "path/filepath" "sync/atomic"  "github.com/secsy/goftp"]
 Functions:
         func ExampleClient_ReadDir_parallelWalk() {
         func Walk(client *goftp.Client, root string, walkFn filepath.WalkFunc) (ret error) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/persistent_connection.go     Packagename: goftp      Length: 546
+Filename: /home/user/go/src/github.com/secsy/goftp/persistent_connection.go     Packagename: goftp      Length: 546
 Imports: ["bufio" "crypto/tls" "fmt" "net" "net/textproto" "strconv" "strings" "time"]
 Functions:
         func (pconn *persistentConn) SendCommand(f string, args ...interface{}) (int, string, error) {
@@ -134,19 +134,19 @@ Functions:
         func (pconn *persistentConn) setType(t string) error {
         func (pconn *persistentConn) logInTLS() error {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/raw_conn_test.go     Packagename: goftp      Length: 77
+Filename: /home/user/go/src/github.com/secsy/goftp/raw_conn_test.go     Packagename: goftp      Length: 77
 Imports: ["io/ioutil" "strings" "testing"]
 Functions:
         func TestRawConn(t *testing.T) {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/reply_codes.go       Packagename: goftp      Length: 75
+Filename: /home/user/go/src/github.com/secsy/goftp/reply_codes.go       Packagename: goftp      Length: 75
 Imports: []
 Functions:
         func positiveCompletionReply(code int) bool {
         func positivePreliminaryReply(code int) bool {
         func transientNegativeCompletionReply(code int) bool {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/transfer.go  Packagename: goftp      Length: 269
+Filename: /home/user/go/src/github.com/secsy/goftp/transfer.go  Packagename: goftp      Length: 269
 Imports: ["fmt" "io" "os" "strconv"]
 Functions:
         func (c *Client) Retrieve(path string, dest io.Writer) error {
@@ -155,7 +155,7 @@ Functions:
         func (c *Client) size(path string) (int64, error) {
         func (c *Client) canResume() bool {
 
-Filename: /home/lbnp/go/src/github.com/secsy/goftp/transfer_test.go     Packagename: goftp      Length: 432
+Filename: /home/user/go/src/github.com/secsy/goftp/transfer_test.go     Packagename: goftp      Length: 432
 Imports: ["bytes" "errors" "io/ioutil" "math/rand" "os" "reflect" "strings" "testing" "time"]
 Functions:
         func TestRetrieve(t *testing.T) {
